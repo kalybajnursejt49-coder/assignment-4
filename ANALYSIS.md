@@ -9,7 +9,7 @@ python tools/run.py --setup
 python tools/run.py --check
 python -m unittest discover -s tests/student -v
 python tests/student/benchmark_search.py
-python tools/run.py --input examples/requests.jsonl
+python tools/run.py --input examples/lcs.jsonl
 ```
 
 The launcher reads `submission.json` and starts `Python/source/main.py`. It consumes one UTF-8 JSON request per line and writes one JSON result per line. No diagnostics are written to stdout. The final full-SHA commit URL must be recorded in Moodle after pushing; it is not yet known at analysis time.
@@ -94,4 +94,4 @@ Random text usually mismatches early, so naive is competitive at these sizes and
 
 ## Sources and AI assistance
 
-Sources: the official Assignment 4 template's README, English specification, contracts, rubric and public tests. AI assistance was used to draft the Python implementations, test suite, benchmark and this analysis. The drafts were checked by running all 44 public cases, the repeated mixed batch, independently computed brute-force properties, and the reproducible timing script. The student must review the algorithms and be able to explain them independently during the defence.
+Sources: the official Assignment 4 template's README, English specification, contracts, rubric and public tests. AI assistance was used to draft the Python implementations, test suite, benchmark and this analysis. The drafts were checked by running all 44 public cases, the repeated mixed batch, independently computed brute-force properties, and the reproducible timing script.
