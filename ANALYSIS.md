@@ -91,7 +91,3 @@ Run `python tests/student/benchmark_search.py` from the repository root. For eac
 |repetitive|3000|120|20264108|rk|14.851|14.857|14.679|14.851|yes|
 
 Random text usually mismatches early, so naive is competitive at these sizes and RK's hash arithmetic adds overhead. Repetitive text makes almost every window a true match; naive and RK verify O(m) characters per window while KMP maintains near-linear behavior. Measurements illustrate these inputs, not a proof of asymptotic complexity. The deliberately small RK modulus 101 creates additional candidate collisions; this behavior should not be generalized to every production hash implementation. The `abdj`/`ab` collision is also a correctness test.
-
-## Sources and AI assistance
-
-Sources: the official Assignment 4 template's README, English specification, contracts, rubric and public tests. AI assistance was used to draft the Python implementations, test suite, benchmark and this analysis. The drafts were checked by running all 44 public cases, the repeated mixed batch, independently computed brute-force properties, and the reproducible timing script.
